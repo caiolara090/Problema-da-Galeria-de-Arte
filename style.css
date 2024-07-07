@@ -18,16 +18,28 @@ nav ul {
     padding: 0;
     text-align: center;
     background: #444;
+    display: flex;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 10px;
+    flex: 1;
+    text-align: center;
+    border-right: 1px solid #666; /* Adiciona uma borda à direita de cada caixa */
+}
+
+nav ul li:last-child {
+    border-right: none; /* Remove a borda à direita do último item */
 }
 
 nav ul li a {
+    display: block;
+    padding: 10px 20px; /* Ajuste o padding conforme necessário */
     color: #fff;
     text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: #666; /* Cor de fundo ao passar o mouse */
 }
 
 main {
@@ -40,10 +52,32 @@ section {
     margin-bottom: 2em;
 }
 
-canvas {
-    border: 1px solid #000;
+video {
     display: block;
     margin: 0 auto;
+    border: 1px solid #000;
+}
+
+.controls {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.controls button, .controls input {
+    margin: 5px;
+    padding: 15px 20px; /* Aumentando o padding para aumentar o tamanho dos botões */
+    font-size: 3em;
+    background-color: #555; /* Cor de fundo dos botões */
+    color: #fff; /* Cor do texto dos botões */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    border-radius: 20px; /* Bordas arredondadas */
+}
+
+.controls button:hover, .controls input:hover {
+    background-color: #777; /* Cor de fundo dos botões ao passar o mouse */
+    transform: scale(1.05); /* Efeito de escala ao passar o mouse */
 }
 
 footer {
