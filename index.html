@@ -22,7 +22,15 @@
     <main>
         <section id="intro">
             <h2>Introdução</h2>
-            <p>O problema da galeria de arte é um problema clássico da teoria dos grafos e geometria computacional...</p>
+            <p>O Problema da Galeria de Arte, que também é conhecido como Problema do Museu, é um problema clássico da área de geometria computacional, que tem a sua origem no seguinte problema do mundo real:</p>
+                <p style="text-align: center; font-style: italic;" >"Numa galeria de arte de forma poligonal, qual é o número mínimo de guardas que juntos podem observar toda a galeria de arte"?</p>
+                <p>Formalmente, considere uma área poligonal disposta como a planta de uma galeria de arte. Nesse caso, queremos minimizar o número de pontos (guardas) que são suficientes para cobrir toda a área da galeria de arte.
+                    Nesse sentido, os guardas não são móveis e têm um campo visual de 360 graus, de modo que vamos considerá-los como câmeras de vigilância.
+                </p>
+                
+                    <img style="text-align: right;" src="galeria.png" width="200" alt="Pontos no Plano">
+                    <p>São necessárias apenas 4 câmeras para vigiar toda a galeria.</p>            
+
         </section>
         <section id="triangulacao">
             <h2>Triangulação de Polígonos</h2>
@@ -34,12 +42,22 @@
         </section>
         <section id="exemplos">
             <h2>Exemplos Interativos</h2>
-            <video id="video" controls width="800">
-                <source src="video.mp4" type="video/mp4">
+            
+            <h3>Pontos no Plano</h3>
+            <img src="pontos.png" width="800" alt="Pontos no Plano">
+
+            <h3>Executando Triangulação</h3>
+            <video id="triangulacao-video" controls width="800" autoplay loop muted>
+                <source src="triangulacao.mp4" type="video/mp4">
                 Seu navegador não suporta o elemento de vídeo.
             </video>
-            <div class="controls">
-            </div>              
+
+            <h3>Executando 3-Coloração</h3>
+            <video id="coloracao-video" controls width="800" autoplay loop muted>
+                <source src="coloracao.mp4" type="video/mp4">
+                Seu navegador não suporta o elemento de vídeo.
+            </video>
+            
         </section>
         <section id="recursos">
             <h2>Recursos</h2>

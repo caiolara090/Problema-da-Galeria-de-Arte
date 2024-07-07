@@ -86,3 +86,16 @@ footer {
     background: #333;
     color: #fff;
 }
+
+.image-text-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    margin: 20px 0;
+}
+
+.image-text-container img {
+    margin-right: 20px;
+}
+
