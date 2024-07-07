@@ -21,26 +21,32 @@
     </nav>
     <main>
         <section id="intro">
-            <h2>Introdução</h2>
-            <p>O Problema da Galeria de Arte, que também é conhecido como Problema do Museu, é um problema clássico da área de geometria computacional, que tem a sua origem no seguinte problema do mundo real:</p>
-                <p style="text-align: center; font-style: italic;" >"Numa galeria de arte de forma poligonal, qual é o número mínimo de guardas que juntos podem observar toda a galeria de arte"?</p>
-                <p>Formalmente, considere uma área poligonal disposta como a planta de uma galeria de arte. Nesse caso, queremos minimizar o número de pontos (guardas) que são suficientes para cobrir toda a área da galeria de arte.
-                    Nesse sentido, os guardas não são móveis e têm um campo visual de 360 graus, de modo que vamos considerá-los como câmeras de vigilância.
-                </p>
-
-                    <img style="text-align: right;" src="galeria1.png" width="800" alt="Galeria de Arte" height="400">            
-
+            <h2 class="fundo-cinza">Introdução</h2>
+            <p style="text-align: justify;">O Problema da Galeria de Arte, que também é conhecido como Problema do Museu, é um problema clássico da área de geometria computacional, que tem a sua origem no seguinte problema do mundo real:</p>
+            <p style="text-align: center; font-style: italic;">"Numa galeria de arte de forma poligonal, qual é o número mínimo de guardas que juntos podem observar toda a galeria de arte"?</p>
+            <p style="text-align: justify;">Formalmente, considere uma área poligonal disposta como a planta de uma galeria de arte. Nesse caso, queremos minimizar o número de pontos (guardas) que são suficientes para cobrir toda a área da galeria de arte. Nesse sentido, os guardas não são móveis e têm um campo visual de 360 graus, de modo que vamos considerá-los como câmeras de vigilância.</p>
+            <img style="text-align: justify;" src="galeria1.png" width="800" alt="Galeria de Arte" height="400">            
         </section>
+
         <section id="triangulacao">
-            <h2>Triangulação de Polígonos</h2>
-            <p>A triangulação de polígonos é uma técnica usada para dividir um polígono em triângulos...</p>
+            <h2 class="fundo-cinza">Triangulação de Polígonos</h2>
+            <p style="text-align: justify;">Uma forma de obter um limite superior para esse problema é dividir o polígono em triângulos e então posicionar uma câmera em cada um deles. <strong>Triangular</strong> um polígono consiste em dividir o polígono em triângulos, por meio das diagonais, que é um segmento que conecta dois vértices de um polígono, estando estritamente dentro do polígono.</p>
+            <p style="text-align: justify;"><strong>TEOREMA: </strong> Todo polígono simples com <em>n</em> vértices possui ao menos uma triangulação com exatamente <em>n-2</em> triângulos.</p>
+            <p style="text-align: justify;">O algoritmo que vamos utilizar para triangular um polígono simples recebido como entrada é o do <em><strong>ear-clipping</strong></em>, de complexidade <em>O(n<sup>2</sup>)</em>. O algoritmo inicia verificando vértices que formam <strong>pontas de orelha</strong>: quando a sequência de pontos <em>p<sub>i-1</sub>-p<sub>i</sub>-p<sub>i+1</sub></em> do polígono faz um giro anti-horário e o triângulo formano não possui nenhum outro ponto dentro dele. Enquanto o número de vértices for maior que 3, remove a ponta de orelha encontrada (<em>p<sub>i</sub></em>) e atualiza os status dos vértices adjacentes (o vértice <em>p<sub>i-1</sub></em> vira vizinho do <em>p<sub>i+1</sub></em>).</p>
+            <p style="text-align: justify;">Com isso, precisamos de no máximo <em>n-2</em> câmeras para cobrir todo o polígono, basta fazer com que cada câmera cuide de um triângulo. Entretanto, é possível reduzir mais este valor, visto que triângulos diferentes podem compartilhar um mesmo vértice, o que tira a necessidade de cada um deles ter sua própria câmera. Assim, precisamos de um subconjunto de vértices capaz de cobrir todos os triângulos.</p>
         </section>
+
         <section id="3-Coloração">
-            <h2>3-Coloração de Polígonos</h2>
-            <p>A 3-Coloração de polígonos é uma técnica usada para...</p>
+            <h2 class="fundo-cinza">3-Coloração de Polígonos</h2>
+            <p style="text-align: justify;">Para executar a ideia apresentada no tópico anterior, podemos utilizar a <strong>coloração</strong> dos vértices do polígono ao nosso favor. A cor que for representada pela menor quantidade de vértices é o limite que desejamos. Embora o problema da coloração seja difícil de resolver, podemos sempre, em um polígono simples, realizar uma 3-coloração com complexidade computacional <em>O(n)</em>.</p>
+            <p style="text-align: justify;">Para tanto, construímos o <strong>grafo dual</strong> do grafo que representa o polígono, onde seus vértices representam os triângulos do polígono e as arestas represemtam triângulos adjacentes.</p>
+            <p style="text-align: justify;">SERIA INTERESSANTE UM VÍDEO DAHORA QUE MOSTRA A CRIAÇÃO</p>
+            <p style="text-align: justify;">Neste grafo dual, rodamos uma DFS (depth-first search). Para o primeiro vértice encontrado - o qual, relembrando, representa um triângulo no grafo original - pintamos o triângulo do grafo original com as três cores possíveis. Para os vértices subsequentes encontrados, utilizamos a terceira cor que não é usada na diagonal compartilhada com o triângulo anterior.</p>
+            <p style="text-align: justify;">Ao terminarmos, teremos uma 3-coloração e dela escolhemos a partição com o menor número de vértices para posicionar as câmeras. Essa escolha nos retorna um conjunto com cerca de <em>n/3</em> câmeras. Este conjunto encontrado <strong>não é o mínimo</strong>, mas é considerado um número razoável de câmeras.</p>
         </section>
+
         <section id="exemplos">
-            <h2>Exemplos Interativos</h2>
+            <h2 class="fundo-cinza">Exemplos Interativos</h2>
             
             <h3>Pontos no Plano</h3>
             <img src="pontos.png" width="800" alt="Pontos no Plano">

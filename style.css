@@ -6,8 +6,18 @@ body {
     background-color: #f4f4f4;
 }
 
+header,
+nav,
+ul,
+li,
+a,
+h1 {
+    margin: 0;
+    padding: 0;
+}
+
 header {
-    background: #333;
+    background: #292929;
     color: #fff;
     padding: 1em 0;
     text-align: center;
@@ -19,6 +29,7 @@ nav ul {
     text-align: center;
     background: #444;
     display: flex;
+    margin: 0; /* Remove qualquer margem padrão do ul */
 }
 
 nav ul li {
@@ -99,3 +110,7 @@ footer {
     margin-right: 20px;
 }
 
+.fundo-cinza {
+    background-color: #cccccc; /* Cor de fundo cinza */
+    padding: 10px; /* Espaçamento interno para melhor aparência */
+}
