@@ -6,7 +6,7 @@ Esse trabalho tem como objetivo mostrar uma forma de resolver o Problema da Gale
 
 ## Implementação
 
-Toda a parte de triangulação e a DFS, executados nesse trabalho, estão disponíveis no notebook Colab (https://colab.research.google.com/drive/1M2eUZtFnvgiYU5CeduJHdxtn4Eg6jhkl#scrollTo=HOCE6R3YsAoK). Nesse link, há um passo a passo de como foram feita as funções e como é possível executá-las sobre os dados de entrada. Sugere-se usar o arquivo Teste.txt como entrada, fazendo seu upload para o Colab e, em seguida, executar o notebook, uma vez que seus dados já estão no formato correto.
+Toda a parte de triangulação e a DFS, executados nesse trabalho, estão disponíveis no notebook Colab (https://colab.research.google.com/drive/1M2eUZtFnvgiYU5CeduJHdxtn4Eg6jhkl?usp=sharing). Nesse link, há um passo a passo de como foram feita as funções e como é possível executá-las sobre os dados de entrada. Sugere-se usar o arquivo Teste.txt como entrada, fazendo seu upload para o Colab e, em seguida, executar o notebook, uma vez que seus dados já estão no formato correto.
 
 ## GitHub Pages
 
