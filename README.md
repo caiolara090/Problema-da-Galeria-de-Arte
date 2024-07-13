@@ -2,7 +2,7 @@
 
 ## Introdução
 
-Esse trabalho tem como objetivo mostrar uma forma de resolver o Problema da Galeria de Arte, um clássico problema da área de Geometria Computacional. Nele, veremos como podemos, a partir de uma planta 2D de uma construção, encontrar um bom número de câmeras que consigam cobrir com sua visão toda a área do local.
+Esse trabalho tem como objetivo mostrar uma forma de resolver o Problema da Galeria de Arte, um clássico problema da área de Geometria Computacional. Nele, veremos como, a partir de uma planta 2D de uma construção, é possível encontrar o número mínimo de câmeras necessário para cobrir toda a área do local.
 
 ## Implementação
 
