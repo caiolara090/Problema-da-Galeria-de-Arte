@@ -48,17 +48,19 @@ class PlotPoints(Scene):
         for line in lines:
             self.add(line)
 
-        for triangulo in triangulos:
-            vertices_manim = [ax.c2p(x, y) for x, y in triangulo]
-            poly = Create(Polygon(*vertices_manim, stroke_color=DARK_BLUE, fill_color=BLUE_B, fill_opacity=0.2), run_time=1)
-            self.play(poly)
+        # Conjunto para rastrear os vértices já coloridos
+        vertices_coloridos = set()
 
-        manim_points2 = [Create(Dot(point=ax.c2p(x, y), color=coordenadas_cores[x, y], radius=0.1, stroke_width=0.1, stroke_color=BLACK), run_time=1) for x, y in points]
-        for i, point in enumerate(manim_points2):
-            self.play(point)
+        # Colorir os vértices de acordo com os triângulos
+        for triangulo in triangulos:
+            for x, y in triangulo:
+                if (x, y) not in vertices_coloridos:
+                    dot = Dot(point=ax.c2p(x, y), color=coordenadas_cores[(x, y)], radius=0.1, stroke_width=0.1, stroke_color=BLACK)
+                    self.play(Create(dot, run_time=1))
+                    vertices_coloridos.add((x, y))
 
         self.wait(1)
 
 # Para renderizar a cena, você pode usar o seguinte comando:
-# manim -pql animacao.py PlotPoints (isso gera um vídeo rápido de qualidae 480p)
+# manim -pql animacao.py PlotPoints (isso gera um vídeo rápido de qualidade 480p)
 # Caso queira o vídeo mais bonito possível digite no terminal: manim animacao.py PlotPoints
