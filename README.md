@@ -6,7 +6,7 @@ Esse trabalho tem como objetivo mostrar uma forma de resolver o Problema da Gale
 
 ## Implementação
 
-Toda a parte de triangulação e a DFS, executados nesse trabalho, estão disponíveis no notebook Colab. Lá há um passo a passo de como foram feita as funções e como é possível executá-las sobre os dados de entrada.
+Toda a parte de triangulação e a DFS, executados nesse trabalho, estão disponíveis no notebook Colab. Lá há um passo a passo de como foram feita as funções e como é possível executá-las sobre os dados de entrada. Sugere-se usar o arquivo Teste.txt como entrada, fazendo seu upload para o Colab e, em seguida, executar o notebook, uma vez que seus dados já estão no formato correto.
 
 ## GitHub Pages
 
@@ -24,4 +24,4 @@ Caso seja de interesse animar a triangulação e a DFS, é necessário, antes, e
 
 4 - Com os arquivos gerados (a saber, pontos.txt, triangulos.txt e cores.txt) no mesmo diretório que animacao.py, rode o programa (manim animacao.py PlotPoints)
 
-5 - Aguarde. Em alguns minutos sua animação será gerada
+5 - Aguarde. Em alguns minutos sua animação será gerada (Se a instância for muito grande e você não quiser esperar muito, digite <manim -pql animacao.py PlotPoints>)
